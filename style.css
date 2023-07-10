@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    padding: 20px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(3, 175, 210, 1) 100%);
+}
+
+#nav #bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 7vh;
+    align-items: center;
+}
+
+.left,
+.right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.left {
+    justify-content: space-evenly;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.navbtn {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbtn:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbtn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#content {
+    background-color: skyblue;
+    background-image: url("/public/cover3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(93vh - 40px);
+}
+
+h1{
+    font-size: 60px;
+    color: white;
+    font-family: 'Spartan', sans-serif
+}
+
+.quadrant{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#content {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: slide-up 1s cubic-bezier(0.65, 0, 0.35, 1)
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
