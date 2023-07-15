@@ -1,0 +1,63 @@
+#content {
+    background-color: skyblue;
+    background-image: url("/public/cover3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(93vh - 40px);
+    user-select: none;
+}
+
+h1{
+    font-size: 60px;
+    color: white;
+    font-family: 'Spartan', sans-serif
+}
+
+.quadrant{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#content {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: slide-up 1s cubic-bezier(0.65, 0, 0.35, 1)
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
