@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    transition: all 2s ease-in-out;
 }
 
 h1{
@@ -79,4 +80,10 @@ span{
 
 #ticket{
     height: 100vh;
+}
+
+.passcard:hover, .ticketcard:hover{
+    background: rgb(11,106,159);
+    background: linear-gradient(167deg, rgba(11,106,159,1) 0%, rgba(0,232,255,1) 100%);
+    color: white;
 }
