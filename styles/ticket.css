@@ -1,31 +1,76 @@
 #content{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 6vh;
+    user-select: none;
 }
 
-#pass{
+#pass, #ticket{
     width: 100%;
-    height: (93vh - 40px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
-.passcard{
+.passcard, .ticketcard{
     height: 70vh;
-    width: 25vw;
     /* color: #00BFFF; */
-    border: 3px solid #87CEFA;
+    border: 3px solid #00BFFF;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 h1{
     font-size: 35px;
+}
+
+h2{
+    margin-bottom: 30%;
+}
+
+span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    background-color: #00BFFF;
+    position: relative;
+    top: 100;
+    bottom: 0%;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ticketcard{
+    width: 35vw;
+}
+
+.passcard{
+    width: 25vw;
+}
+
+#pass{
+    height: calc(93vh - 40px);
+}
+
+#ticket{
+    height: 100vh;
 }
