@@ -1,57 +1,98 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="store.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="store.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <main>
-        <div id="nav">
-            <div id="bar">
-                <div id="logo">
-                    <a href="./index.html"><img src="./public/fairy.png" alt="Home" width="35"></a>
-                </div>
-                <div class="left">
-                    <a href="./ticket.html" class="navbtn">Tickets/Pass</a>
-                     
-                    <a href="./park.html" class="navbtn">Fairy Park</a>
-                </div>
-                <div class="right">
-                    <a href="./store.html" class="navbtn">E-Store</a>
-                    <a href="./about.html" class="navbtn">About us</a>
-                    <a href="./contact.html" class="navbtn">Contact us</a>
-                </div>
-            </div>
+  <main>
+    <div id="nav">
+      <div id="bar">
+        <div id="logo">
+          <a href="./index.html"><img src="./public/fairy.png" alt="Home" width="35"></a>
         </div>
+        <div class="left">
+          <a href="./ticket.html" class="navbtn">Tickets/Pass</a>
 
-        <div class="container">
-            <h1>E-Store</h1>
-            
-            <div class="store">
-              
-              <figure class="card">
-                <img src="public/hat.jpeg" alt="">
-                <figcaption>Fairy Hat</figcaption>
-              </figure>
-              <figure class="card">
-                <img src="public/bag.jpg" alt="">
-                <figcaption>Fairy Purse</figcaption>
-              </figure>
-              <figure class="card">
-                <img src="public/fridge-magnet.jpeg" alt="">
-                <figcaption>Special Fridge-Magnet</figcaption>
-              </figure>
-              <figure class="card">
-                <img src="public/hoodie.jpg" alt="">
-                <figcaption>Fairy Hoodie</figcaption>
-              </figure>
+          <a href="./park.html" class="navbtn">Fairy Park</a>
+        </div>
+        <div class="right">
+          <a href="./store.html" class="navbtn">E-Store</a>
+          <a href="./about.html" class="navbtn">About us</a>
+          <a href="./contact.html" class="navbtn">Contact us</a>
+        </div>
+      </div>
+    </div>
 
-            </div>
-          </div>
+    <div class="container">
+      <h1>E-Store</h1>
 
-    </main>
+      <div class="store">
+
+        <figure class="card" onclick="swap()">
+          <img src="public/hat.jpeg" alt="">
+          <figcaption>Fairy Hat</figcaption>
+        </figure>
+        <figure class="card" onclick="swap()">
+          <img src="public/bag.jpg" alt="">
+          <figcaption>Fairy Purse</figcaption>
+        </figure>
+        <figure class="card" onclick="swap()">
+          <img src="public/fridge-magnet.jpeg" alt="">
+          <figcaption>Special Fridge-Magnet</figcaption>
+        </figure>
+        <figure class="card" onclick="swap()">
+          <img src="public/hoodie.jpg" alt="">
+          <figcaption>Fairy Hoodie</figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="checkout">
+    <form method="get" onsubmit="clear();swap()">
+
+      <h1>CHECKOUT</h1>
+
+      <label for="name">
+        NAME: <input type="text" name="name" id="name" required/>
+      </label>
+
+      <label for="ph">
+        CONTACT NO. : <input type="tel" name="ph" id="ph" required/>
+      </label>
+
+      <label for="mail">
+        EMAIL ID: <input type="mail" name="mail" id="mail" required/>
+      </label>
+
+      <label for="address">
+        ADDRESS: <input type="text" name="address" id="address" required/>
+      </label>
+
+      <label for="payment">
+        Select Payment Method: 
+        <select name="payment" id="payment" required>
+          <option value="COD">Cash on Delivery</option>
+          <option value="Debit" disabled>Debit Card</option>
+          <option value="Credit" disabled>Credit Card</option>
+          <option value="UPI" disabled>UPI</option>
+        </select>
+      </label>
+
+      <button type="submit">Submit Details</button>
+
+    </form>
+  </div>
+
+  <script src="./src/script.js"></script>
 
 </body>
+
 </html>
