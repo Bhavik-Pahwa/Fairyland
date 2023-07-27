@@ -1,0 +1,24 @@
+.rides{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: calc(93vh - 40px);
+    align-content: space-evenly;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    height: 35vh;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.card img{
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+}
